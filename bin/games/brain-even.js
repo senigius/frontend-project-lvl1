@@ -9,8 +9,8 @@ const arr = [15, 6, 7];
 let result = 0;
 for (let i = 0; i < 3; i += 1) {
   const task = arr[i];
-  if (task % 2 === 0) answer = 'no';
-  else answer = 'yes';
+  if (task % 2 === 0) answer = 'yes';
+  else answer = 'no';
   result += game(task, answer, name);
   if (result > 4) break;
 }
