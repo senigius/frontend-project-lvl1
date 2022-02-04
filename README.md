@@ -12,7 +12,7 @@
 4) sudo npm link
 
 demo brain-even:
-https://asciinema.org/a/tdvESu8Lz03zLlaBNU1wkqdc5
+<a href="https://asciinema.org/a/tdvESu8Lz03zLlaBNU1wkqdc5" target="_blank"><img src="https://asciinema.org/a/tdvESu8Lz03zLlaBNU1wkqdc5.svg" /></a>
 demo brain-calc:
 https://asciinema.org/a/UBO12Y88pAQLer3Qiq9r2tII7
 demo brain-gcd:
