@@ -5,6 +5,12 @@
 
 ![brain-games](https://github.com/senigius/frontend-project-lvl1/actions/workflows/github-actions-demo.yml/badge.svg)
 
+Для установки и запуска:
+1) git clone https://github.com/senigius/frontend-project-lvl1
+2) cd frontend-project-lvl1
+3) make install
+4) sudo npm link
+
 demo brain-even: https://asciinema.org/a/tdvESu8Lz03zLlaBNU1wkqdc5
 demo brain-calc: https://asciinema.org/a/UBO12Y88pAQLer3Qiq9r2tII7
 demo brain-gcd: https://asciinema.org/a/lY3VX2GHtJk4cFoNPEUrmKmRo
