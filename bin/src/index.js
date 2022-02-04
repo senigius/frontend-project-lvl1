@@ -11,7 +11,7 @@ const game = (task, answer, name) => {
     console.log('Correct!');
     return 1;
   }
-  console.log(`You're wrong, mister ${name} :<. Correct answer is '${answer}'\nTry again!`);
+  console.log(`You're wrong, sir/ms ${name} :<. Correct answer is '${answer}'\nTry again!`);
   return 5;
 };
 export default game;
