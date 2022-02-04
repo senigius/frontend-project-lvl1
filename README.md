@@ -5,4 +5,5 @@
 
 ![brain-games](https://github.com/senigius/frontend-project-lvl1/actions/workflows/github-actions-demo.yml/badge.svg)
 
-https://asciinema.org/a/M6gNjibWj7nBKXgxDWDxDhzri
+demo brain-even: https://asciinema.org/a/tdvESu8Lz03zLlaBNU1wkqdc5
+demo brain-calc: https://asciinema.org/a/UBO12Y88pAQLer3Qiq9r2tII7
