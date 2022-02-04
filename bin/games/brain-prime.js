@@ -19,5 +19,5 @@ for (let i = 0; i < 3; i += 1) {
   if (result > 4) break;
 }
 if (result === 3) {
-  console.log(`Congratulation, ${name}!`);
+  console.log(`Congratulations, ${name}!`);
 }
