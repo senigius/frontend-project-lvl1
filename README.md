@@ -12,12 +12,12 @@
 4) sudo npm link
 
 demo brain-even:
-<a href="https://asciinema.org/a/tdvESu8Lz03zLlaBNU1wkqdc5" target="_blank"><img src="https://asciinema.org/a/tdvESu8Lz03zLlaBNU1wkqdc5.svg" /></a>
+<script id="asciicast-tdvESu8Lz03zLlaBNU1wkqdc5" src="https://asciinema.org/a/tdvESu8Lz03zLlaBNU1wkqdc5.js" async></script>
 demo brain-calc:
-https://asciinema.org/a/UBO12Y88pAQLer3Qiq9r2tII7
+<script id="asciicast-UBO12Y88pAQLer3Qiq9r2tII7" src="https://asciinema.org/a/UBO12Y88pAQLer3Qiq9r2tII7.js" async></script>
 demo brain-gcd:
-https://asciinema.org/a/lY3VX2GHtJk4cFoNPEUrmKmRo
+<script id="asciicast-lY3VX2GHtJk4cFoNPEUrmKmRo" src="https://asciinema.org/a/lY3VX2GHtJk4cFoNPEUrmKmRo.js" async></script>
 demo brain-progression:
-https://asciinema.org/a/GXYEd7KBf6BtBYPxKJEbzUbRE
+<script id="asciicast-GXYEd7KBf6BtBYPxKJEbzUbRE" src="https://asciinema.org/a/GXYEd7KBf6BtBYPxKJEbzUbRE.js" async></script>
 demo brain-prime:
-https://asciinema.org/a/jLtx5bhvPArINaJMPLy2Aqwgy
+<script id="asciicast-jLtx5bhvPArINaJMPLy2Aqwgy" src="https://asciinema.org/a/jLtx5bhvPArINaJMPLy2Aqwgy.js" async></script>
