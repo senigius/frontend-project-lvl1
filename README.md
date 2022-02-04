@@ -7,3 +7,4 @@
 
 demo brain-even: https://asciinema.org/a/tdvESu8Lz03zLlaBNU1wkqdc5
 demo brain-calc: https://asciinema.org/a/UBO12Y88pAQLer3Qiq9r2tII7
+demo brain-gcd: https://asciinema.org/a/lY3VX2GHtJk4cFoNPEUrmKmRo
