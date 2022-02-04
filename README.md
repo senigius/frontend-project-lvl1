@@ -12,6 +12,7 @@
 4) sudo npm link
 
 Игры:
+
 Четное ли число?
 <a href="https://asciinema.org/a/tdvESu8Lz03zLlaBNU1wkqdc5" target="_blank"><img src="https://asciinema.org/a/tdvESu8Lz03zLlaBNU1wkqdc5.svg" /></a>
 Калькулятор
