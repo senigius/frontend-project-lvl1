@@ -18,3 +18,6 @@ brain-cals:
 
 brain-gcd:
 		node bin/games/brain-gcd.js
+
+brain-prime:
+		node bin/games/brain-prime.js

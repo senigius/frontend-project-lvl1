@@ -1,21 +1,20 @@
 #!/usr/bin/env node
 import askName from '../src/cli.js';
-import game from '../src/index.js';
+import game, { random } from '../src/index.js';
 
-const random = (min, max) => {
-  const randomNum = Math.floor(min + Math.random() * (max + 1 - min));
-  return randomNum;
-};
 const name = askName();
 let result = 0;
 console.log('What number is missing in the progression?');
-for (let i = 0; i < 3; i += 1) {
+for (let i = 0; i < 3; i += 1) { // начинаем цикл игр
   const arr = [];
+  // выбираем число, на которое увеличивается  последовательность
   const randomProgressionNum = random(2, 5);
+  // делаем и заполняем массив, первое число выбирается случайно
   for (let j = 0; j < random(8, 13); j += 1) {
     if (arr.length === 0) arr.push(random(1, 15));
     arr.push(arr[j] + randomProgressionNum);
   }
+  // достаём случайное число
   const missingNum = [arr.length - random(1, arr.length)];
   const answer = arr[missingNum];
   arr[missingNum] = '..';
