@@ -3,7 +3,7 @@ import askName from '../src/cli.js';
 import game, { random } from '../src/index.js';
 
 const name = askName();
-console.log('Answer "yes" if the number is prime, otherwise answer "no".');
+console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 let result = 0;
 for (let i = 0; i < 3; i += 1) {
   const task = random(2, 50); // выбираем число
@@ -19,5 +19,5 @@ for (let i = 0; i < 3; i += 1) {
   if (result > 4) break;
 }
 if (result === 3) {
-  console.log(`Congrats, ${name}`);
+  console.log(`Congratulation, ${name}!`);
 }
