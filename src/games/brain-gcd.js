@@ -1,5 +1,5 @@
 import askName from '../cli.js';
-import game, { random } from '../index.js';
+import game, { random, congrats } from '../index.js';
 
 const brainGcd = () => {
   const name = askName();
@@ -17,8 +17,6 @@ const brainGcd = () => {
     result += game(task, answer, name);
     if (result > 4) break;
   }
-  if (result === 3) {
-    console.log(`Congratulations, ${name}!`);
-  }
+  congrats(result, name);
 };
 export default brainGcd;

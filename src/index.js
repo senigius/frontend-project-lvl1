@@ -20,3 +20,9 @@ export const random = (min, max) => {
   const randomNum = Math.floor(min + Math.random() * (max + 1 - min));
   return randomNum;
 };
+
+export const congrats = (result, name) => {
+  if (result === 3) {
+    console.log(`Congratulations, ${name}!`);
+  }
+};
