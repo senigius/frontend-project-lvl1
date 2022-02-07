@@ -14,7 +14,7 @@ const brainProgression = () => {
       if (arr.length === 0) arr.push(random(1, 15));
       arr.push(arr[j] + randomProgressionNum);
     }
-    // достаём случайное число
+    // достаём случайное число и заменяем его на ..
     const missingNum = [arr.length - random(1, arr.length)];
     const answer = arr[missingNum];
     arr[missingNum] = '..';

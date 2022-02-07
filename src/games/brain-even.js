@@ -8,8 +8,9 @@ const brainEven = () => {
   let result = 0;
   for (let i = 0; i < 3; i += 1) {
     const task = random(1, 50);
+    // если число делится на 2 без остатка оно четное
     if (task % 2 === 0) answer = 'yes';
-    else answer = 'no';
+    else answer = 'no'; // если нет, то ответ нет
     result += game(task, answer, name);
     if (result > 4) break;
   }

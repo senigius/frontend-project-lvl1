@@ -9,7 +9,7 @@ const brainGcd = () => {
     let num1 = random(2, 50); // рандомим два числа
     let num2 = random(2, 100);
     const task = `${num1} ${num2}`; // для вывода задачи пользователю
-    while (num1 !== num2) {
+    while (num1 !== num2) { // ищем НОД
       if (num1 > num2) num1 -= num2;
       else num2 -= num1;
     }
