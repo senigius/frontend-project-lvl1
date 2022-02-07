@@ -78,3 +78,16 @@ export const findGCD = (number1, number2) => {
   }
   return num1;
 };
+
+export const isPrime = (num) => {
+  let answer = 'yes';
+  // проверяем является ли число простым
+  for (let j = 2; j < num; j += 1) {
+    if (num % j === 0) {
+      // eslint-disable-next-line no-unused-vars
+      answer = 'no';
+      break;
+    }
+  }
+  return answer;
+};
