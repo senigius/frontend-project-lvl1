@@ -68,3 +68,13 @@ export const makeArray = () => {
   }
   return arr;
 };
+
+export const findGCD = (number1, number2) => {
+  let num1 = number1;
+  let num2 = number2;
+  while (num1 !== num2) { // ищем НОД
+    if (num1 > num2) num1 -= num2;
+    else num2 -= num1;
+  }
+  return num1;
+};
