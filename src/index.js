@@ -26,3 +26,25 @@ export const congrats = (result, name) => {
     console.log(`Congratulations, ${name}!`);
   }
 };
+
+export const operandsForCalc = (operation, num1, num2) => {
+  let answer;
+  switch (operation) { // выбор операнда в зависимости от цифры
+    case 0:
+      answer = num1 + num2;
+      break;
+    case 1:
+      answer = num1 - num2;
+      break;
+    default:
+      // eslint-disable-next-line no-unused-vars
+      answer = num1 * num2;
+      break;
+  }
+  return answer;
+};
+
+export const operationForCalc = (operation) => {
+  const arr = ['+', '-', '*'];
+  return arr[operation];
+};
