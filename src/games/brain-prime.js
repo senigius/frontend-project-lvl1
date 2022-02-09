@@ -1,5 +1,18 @@
 import askName from '../cli.js';
-import game, { random, congrats, isPrime } from '../index.js';
+import game, { random, congrats } from '../index.js';
+
+const isPrime = (num) => {
+  let answer = 'yes';
+  // проверяем является ли число простым
+  for (let j = 2; j < num; j += 1) {
+    if (num % j === 0) {
+      // eslint-disable-next-line no-unused-vars
+      answer = 'no';
+      break;
+    }
+  }
+  return answer;
+};
 
 const brainPrime = () => {
   const name = askName();

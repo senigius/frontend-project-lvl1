@@ -1,5 +1,15 @@
 import askName from '../cli.js';
-import game, { random, congrats, findGCD } from '../index.js';
+import game, { random, congrats } from '../index.js';
+
+const findGCD = (number1, number2) => {
+  let num1 = number1;
+  let num2 = number2;
+  while (num1 !== num2) { // ищем НОД
+    if (num1 > num2) num1 -= num2;
+    else num2 -= num1;
+  }
+  return num1;
+};
 
 const brainGcd = () => {
   const name = askName();
