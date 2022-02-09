@@ -1,5 +1,4 @@
-import askName from '../cli.js';
-import game, { random, congrats } from '../index.js';
+import game, { random } from '../index.js';
 
 const isPrime = (num) => {
   let answer = 'yes';
@@ -15,15 +14,13 @@ const isPrime = (num) => {
 };
 
 const brainPrime = () => {
-  const name = askName();
-  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-  let result = 0;
+  const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+  const forGame = [rules];
   for (let i = 0; i < 3; i += 1) {
     const task = random(2, 50); // выбираем число
     const answer = isPrime(task);
-    result += game(task, answer, name);
-    if (result > 4) break;
+    forGame.push([task, String(answer)]);
   }
-  congrats(result, name);
+  game(forGame);
 };
 export default brainPrime;
