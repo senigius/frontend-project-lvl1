@@ -9,10 +9,12 @@ const congrats = (result, name) => {
 
 const game = (arr) => {
   const name = askName();
-  console.log(`Question: ${arr[0]}`);
+  // показываем правила
+  console.log(arr[0]);
   let result = 0;
   for (let i = 1; i < 4; i += 1) {
-    console.log(arr[i][0]);
+    // показываем задачу
+    console.log(`Question: ${arr[i][0]}`);
     const userAnswer = readLineSync.question('Your answer: '); // читаем ответ
     if (arr[i][1] === userAnswer) {
       console.log('Correct!');
