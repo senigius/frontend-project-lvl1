@@ -1,4 +1,4 @@
-import game, { random } from '../index.js';
+import game, { random, numberOfGames } from '../index.js';
 
 const pullNumber = (arr) => {
   const missingNum = [arr.length - random(1, arr.length)];
@@ -22,14 +22,14 @@ const makeArray = () => {
 
 const brainProgression = () => {
   const rules = 'What number is missing in the progression?';
-  const forGame = [rules];
-  for (let i = 0; i < 3; i += 1) { // начинаем цикл игр
+  const forGame = [];
+  for (let i = 0; i < numberOfGames; i += 1) { // начинаем цикл игр
     const arr = makeArray();
     // достаём случайное число и заменяем его на ..
     const answer = pullNumber(arr);
     const task = arr.join(' '); // для вывода задачи пользователю
     forGame.push([task, String(answer)]);
   }
-  game(forGame);
+  game(forGame, rules);
 };
 export default brainProgression;

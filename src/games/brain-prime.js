@@ -1,4 +1,4 @@
-import game, { random } from '../index.js';
+import game, { random, numberOfGames } from '../index.js';
 
 const isPrime = (num) => {
   let answer = 'yes';
@@ -15,12 +15,12 @@ const isPrime = (num) => {
 
 const brainPrime = () => {
   const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  const forGame = [rules];
-  for (let i = 0; i < 3; i += 1) {
+  const forGame = [];
+  for (let i = 0; i < numberOfGames; i += 1) {
     const task = random(2, 50); // выбираем число
     const answer = isPrime(task);
     forGame.push([task, String(answer)]);
   }
-  game(forGame);
+  game(forGame, rules);
 };
 export default brainPrime;
