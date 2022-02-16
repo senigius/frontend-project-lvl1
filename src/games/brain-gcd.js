@@ -1,21 +1,15 @@
-import game, { random, numberOfGames } from '../index.js';
+import getRandomNumber from '../getRandomNumber.js';
+import game, { numberOfGames } from '../index.js';
 
-const findGCD = (number1, number2) => {
-  let num1 = number1;
-  let num2 = number2;
-  while (num1 !== num2) { // ищем НОД
-    if (num1 > num2) num1 -= num2;
-    else num2 -= num1;
-  }
-  return num1;
-};
+// Алгоритм Евклида
+const findGCD = (x, y) => (x !== 0 ? findGCD(y % x, x) : y);
 
 const brainGcd = () => {
   const rules = 'Find the greatest common divisor of given numbers';
   const forGame = [];
   for (let i = 0; i < numberOfGames; i += 1) {
-    const num1 = random(2, 20); // рандомим два числа
-    const num2 = random(2, 10);
+    const num1 = getRandomNumber(2, 20); // рандомим два числа
+    const num2 = getRandomNumber(2, 10);
     const task = `${num1} ${num2}`; // для вывода задачи пользователю
     const answer = findGCD(num1, num2);
     forGame.push([task, String(answer)]);

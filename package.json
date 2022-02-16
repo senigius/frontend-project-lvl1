@@ -1,6 +1,6 @@
 {
   "name": "@hexlet/code",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "My first project",
   "bin": {
     "brain-games": "bin/brain-games.js",

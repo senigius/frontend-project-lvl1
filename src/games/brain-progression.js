@@ -1,21 +1,10 @@
-import game, { random, numberOfGames } from '../index.js';
+import getRandomNumber from '../getRandomNumber.js';
+import game, { numberOfGames } from '../index.js';
 
-const pullNumber = (arr) => {
-  const missingNum = [arr.length - random(1, arr.length)];
-  const answer = arr[missingNum];
-  // eslint-disable-next-line no-param-reassign
-  arr[missingNum] = '..';
-  return answer;
-};
-
-const makeArray = () => {
+const makeProgression = (start, step, length) => {
   const arr = [];
-  // выбираем число, на которое увеличивается  последовательность
-  const randomProgressionNum = random(2, 5);
-  // делаем и заполняем массив, первое число выбирается случайно
-  for (let j = 0; j < random(8, 13); j += 1) {
-    if (arr.length === 0) arr.push(random(1, 15));
-    arr.push(arr[j] + randomProgressionNum);
+  for (let i = 0; i < length; i += 1) {
+    arr.push(start + step * i);
   }
   return arr;
 };
@@ -23,11 +12,15 @@ const makeArray = () => {
 const brainProgression = () => {
   const rules = 'What number is missing in the progression?';
   const forGame = [];
-  for (let i = 0; i < numberOfGames; i += 1) { // начинаем цикл игр
-    const arr = makeArray();
-    // достаём случайное число и заменяем его на ..
-    const answer = pullNumber(arr);
-    const task = arr.join(' '); // для вывода задачи пользователю
+  for (let i = 0; i < numberOfGames; i += 1) {
+    const start = getRandomNumber(1, 15);
+    const step = getRandomNumber(2, 4);
+    const length = getRandomNumber(8, 13);
+    const arr = makeProgression(start, step, length);
+    const missingNum = [arr.length - getRandomNumber(1, arr.length - 1)];
+    const answer = arr[missingNum];
+    arr[missingNum] = '..';
+    const task = arr.join(' ');
     forGame.push([task, String(answer)]);
   }
   game(forGame, rules);

@@ -9,23 +9,16 @@ const game = (arr, rules) => {
   // показываем правила
   console.log(rules);
   for (let i = 0; i < numberOfGames; i += 1) {
-    const question = arr[i][0];
-    const answer = arr[i][1];
+    const [question, answer] = arr[i];
     // показываем задачу
     console.log(`Question: ${question}`);
     const userAnswer = readLineSync.question('Your answer: '); // читаем ответ
-    if (answer === userAnswer) {
-      console.log('Correct!');
-    } else {
+    if (answer !== userAnswer) {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'.\nLet's try again, ${name}!`);
       return;
     }
+    console.log('Correct!');
   }
   console.log(`Congratulations, ${name}!`);
 };
 export default game;
-
-export const random = (min, max) => {
-  const randomNum = Math.floor(min + Math.random() * (max + 1 - min));
-  return randomNum;
-};

@@ -1,24 +1,22 @@
-import game, { random, numberOfGames } from '../index.js';
+import getRandomNumber from '../getRandomNumber.js';
+import game, { numberOfGames } from '../index.js';
 
 const isPrime = (num) => {
-  let answer = 'yes';
   // проверяем является ли число простым
-  for (let j = 2; j < num; j += 1) {
-    if (num % j === 0) {
-      // eslint-disable-next-line no-unused-vars
-      answer = 'no';
-      break;
+  for (let i = 2; i <= Math.sqrt(num); i += 1) {
+    if (num % i === 0) {
+      return false;
     }
   }
-  return answer;
+  return true;
 };
 
 const brainPrime = () => {
   const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
   const forGame = [];
   for (let i = 0; i < numberOfGames; i += 1) {
-    const task = random(2, 50); // выбираем число
-    const answer = isPrime(task);
+    const task = getRandomNumber(2, 50); // выбираем число
+    const answer = isPrime(task) ? 'yes' : 'no';
     forGame.push([task, String(answer)]);
   }
   game(forGame, rules);
