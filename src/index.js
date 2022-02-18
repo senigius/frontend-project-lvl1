@@ -1,6 +1,6 @@
 import readLineSync from 'readline-sync';
 
-export const numberOfGames = 3;
+export const numberOfRounds = 3;
 
 const game = (arr, rules) => {
   console.log('Welcome to the Brain Games!');
@@ -8,7 +8,7 @@ const game = (arr, rules) => {
   console.log(`Hello, ${name}!`);
   // показываем правила
   console.log(rules);
-  for (let i = 0; i < numberOfGames; i += 1) {
+  for (let i = 0; i < numberOfRounds; i += 1) {
     const [question, answer] = arr[i];
     // показываем задачу
     console.log(`Question: ${question}`);

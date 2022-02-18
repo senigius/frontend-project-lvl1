@@ -1,5 +1,7 @@
 import getRandomNumber from '../getRandomNumber.js';
-import game, { numberOfGames } from '../index.js';
+import game, { numberOfRounds } from '../index.js';
+
+const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (num) => {
   // проверяем является ли число простым
@@ -12,9 +14,8 @@ const isPrime = (num) => {
 };
 
 const brainPrime = () => {
-  const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
   const forGame = [];
-  for (let i = 0; i < numberOfGames; i += 1) {
+  for (let i = 0; i < numberOfRounds; i += 1) {
     const task = getRandomNumber(2, 50); // выбираем число
     const answer = isPrime(task) ? 'yes' : 'no';
     forGame.push([task, String(answer)]);

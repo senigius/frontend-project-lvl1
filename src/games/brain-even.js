@@ -1,15 +1,15 @@
 import getRandomNumber from '../getRandomNumber.js';
-import game, { numberOfGames } from '../index.js';
+import game, { numberOfRounds } from '../index.js';
+
+const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const isEven = (num) => num % 2 === 0;
 
 const brainEven = () => {
-  const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
   const forGame = [];
-  for (let i = 0; i < numberOfGames; i += 1) {
-    let answer = 'no';
+  for (let i = 0; i < numberOfRounds; i += 1) {
     const task = getRandomNumber(1, 50);
-    if (isEven(task)) answer = 'yes';
+    const answer = isEven(task) ? 'yes' : 'no';
     forGame.push([task, answer]);
   }
   game(forGame, rules);

@@ -1,26 +1,27 @@
 import getRandomNumber from '../getRandomNumber.js';
-import game, { numberOfGames } from '../index.js';
+import game, { numberOfRounds } from '../index.js';
+
+const rules = 'What number is missing in the progression?';
 
 const makeProgression = (start, step, length) => {
-  const arr = [];
+  const progression = [];
   for (let i = 0; i < length; i += 1) {
-    arr.push(start + step * i);
+    progression.push(start + step * i);
   }
-  return arr;
+  return progression;
 };
 
 const brainProgression = () => {
-  const rules = 'What number is missing in the progression?';
   const forGame = [];
-  for (let i = 0; i < numberOfGames; i += 1) {
+  for (let i = 0; i < numberOfRounds; i += 1) {
     const start = getRandomNumber(1, 15);
     const step = getRandomNumber(2, 4);
     const length = getRandomNumber(8, 13);
-    const arr = makeProgression(start, step, length);
-    const missingNum = [arr.length - getRandomNumber(1, arr.length - 1)];
-    const answer = arr[missingNum];
-    arr[missingNum] = '..';
-    const task = arr.join(' ');
+    const progression = makeProgression(start, step, length);
+    const missingNum = getRandomNumber(0, progression.length - 1);
+    const answer = progression[missingNum];
+    progression[missingNum] = '..';
+    const task = progression.join(' ');
     forGame.push([task, String(answer)]);
   }
   game(forGame, rules);

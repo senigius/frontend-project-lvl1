@@ -1,5 +1,7 @@
 import getRandomNumber from '../getRandomNumber.js';
-import game, { numberOfGames } from '../index.js';
+import game, { numberOfRounds } from '../index.js';
+
+const rules = 'What is the result of the expression?';
 
 const operandsForCalc = (operation, num1, num2) => {
   switch (operation) { // выбор операнда в зависимости от цифры
@@ -17,14 +19,13 @@ const operandsForCalc = (operation, num1, num2) => {
 const arr = ['+', '-', '*']; // массив с операциями
 
 const brainCalc = () => {
-  const rules = 'What is the result of the expression?';
   const forGame = [];
-  for (let i = 0; i < numberOfGames; i += 1) {
-    const operator1 = getRandomNumber(1, 10); // рандомим два оператора
-    const operator2 = getRandomNumber(1, 10);
+  for (let i = 0; i < numberOfRounds; i += 1) {
+    const num1 = getRandomNumber(1, 10); // рандомим два оператора
+    const num2 = getRandomNumber(1, 10);
     const operation = arr[getRandomNumber(0, arr.length - 1)]; // достаём случайную операцию
-    const answer = operandsForCalc(operation, operator1, operator2);
-    const task = `${operator1} ${operation} ${operator2}`; // для вывода задачи пользователю
+    const answer = operandsForCalc(operation, num1, num2);
+    const task = `${num1} ${operation} ${num2}`; // для вывода задачи пользователю
     forGame.push([task, String(answer)]);
   }
   game(forGame, rules);
